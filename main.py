@@ -8,7 +8,7 @@ from alpha_vantage.fundamentaldata import FundamentalData
 from stocknews import StockNews
 
 #Designing Streamlit Webapplication
-st.header("Stock Dashboard ")
+st.title("Stock Dashboard ")
 st.write("This app helps you track your favourite stocks. Also provide latest NEWS for better investing decisions")
 ticker=st.sidebar.text_input('Write Ticker of your favourite stock:')
 start_date=st.sidebar.date_input("Select starting date:")
@@ -29,7 +29,7 @@ with price_data:
     data2['%Change']= data['Adj Close']/data['Adj Close'].shift(1)
     data2.dropna(inplace=True)
     st.write(data2)
-    annual_return = data2['% Change'].mean()*252
+    annual_return = data2['% Change'].mean()*252*100
     st.subheader('The annual return is', annual_return, "%")
     risk = np.std(data2['% Change'])*np.sqrt(252)
     st.subheader("The annualized risk is", risk, "%")
