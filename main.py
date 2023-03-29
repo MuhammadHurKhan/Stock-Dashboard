@@ -32,7 +32,7 @@ with price_data:
     annual_return = data2['%Change'].mean()*252/100
     st.subheader(f'The annual return is {annual_return:.2%}')
     risk = np.std(data2['% Change'])*np.sqrt(252)
-    st.subheader(f"The annualized risk is {risk:.2%}')
+    st.subheader(f'The annualized risk is {risk:.2%}')
     st.subheader('The risk adjusted return is ', annual_return/risk, '%')
     
 with fundamental_data:
