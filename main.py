@@ -8,7 +8,7 @@ from alpha_vantage.fundamentaldata import FundamentalData
 from stocknews import StockNews
 
 #Designing Streamlit Webapplication
-st.title("Stock Dashboard ")
+st.header("Stock Dashboard ")
 st.write("This app helps you track your favourite stocks. Also provide latest NEWS for better investing decisions")
 ticker=st.sidebar.text_input('Write Ticker of your favourite stock:')
 start_date=st.sidebar.date_input("Select starting date:")
