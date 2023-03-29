@@ -29,7 +29,7 @@ with price_data:
     data2['%Change']= data['Adj Close']/data['Adj Close'].shift(1)
     data2.dropna(inplace=True)
     st.write(data2)
-    annual_return = data2['% Change'].mean()*252*100
+    annual_return = data2['%Change'].mean()*252
     st.subheader('The annual return is', annual_return, "%")
     risk = np.std(data2['% Change'])*np.sqrt(252)
     st.subheader("The annualized risk is", risk, "%")
