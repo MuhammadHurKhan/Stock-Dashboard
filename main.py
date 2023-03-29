@@ -30,7 +30,7 @@ with price_data:
     data2.dropna(inplace=True)
     st.write(data2)
     annual_return = data2['%Change'].mean()*252
-    st.subheader('The annual return is', annual_return, "%")
+    st.subheader(f'The annual return is {annual_return:.2%}')
     risk = np.std(data2['% Change'])*np.sqrt(252)
     st.subheader("The annualized risk is", risk, "%")
     st.subheader('The risk adjusted return is ', annual_return/risk, '%')
