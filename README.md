@@ -4,7 +4,7 @@ This is a Python web application that allows users to track their favorite stock
 # How to Use
 To use the application, follow these steps:
 
-# Clone the repository to your local machine.
+Clone the repository to your local machine.
 Install the required dependencies listed in the requirements.txt file.
 Open the terminal and navigate to the directory where the repository is cloned.
 Type streamlit run stock_dashboard.py to run the application.
