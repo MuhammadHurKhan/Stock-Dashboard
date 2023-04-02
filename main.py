@@ -30,11 +30,11 @@ with price_data:
     data2.dropna(inplace=True)
     st.write(data2)
     annual_return = data2['%Change'].mean()*252/100
-    st.subheader(f'The annual return is {annual_return:.2%}')
-    risk = np.std(data2['% Change'])*np.sqrt(252)
-    st.subheader(f'The annualized risk is {risk:.2%}')
-    st.subheader('The risk adjusted return is ', annual_return/risk, '%')
-    
+    st.write(f'The annual return is {annual_return:.2%}')
+    risk = np.std(data2['%Change'])*np.sqrt(252)
+    st.write(f'The annualized risk is {risk:.2%}')
+    st.write('The risk adjusted return is ', annual_return/risk, '%')
+
 with fundamental_data:
     key = '7VZ1DSZYTKJQ6DME'
     fd = FundamentalData(key, output_format= 'pandas')
