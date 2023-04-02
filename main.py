@@ -10,7 +10,7 @@ from stocknews import StockNews
 #Designing Streamlit Webapplication
 st.title("Stock Dashboard ")
 st.write("This app helps you track your favourite stocks. Also provide latest NEWS for better investing decisions")
-ticker=st.sidebar.text_input('Write Ticker of your favourite stock:')
+ticker = st.sidebar.text_input('Write Ticker of your favourite stock:', value='', max_chars=5)
 start_date=st.sidebar.date_input("Select starting date:")
 end_date=st.sidebar.date_input("Select ending date:")
 
