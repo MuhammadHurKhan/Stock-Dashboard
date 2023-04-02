@@ -43,7 +43,7 @@ with fundamental_data:
     bs = balance_sheet.T[2:]
     bs.columns = list(balance_sheet.T.iloc[0])
     st.write(bs)
-    st.subhheader('Income Statement')
+    st.subheader('Income Statement')
     income_statement = fd.get_income_statement_annual(ticker)[0]
     is1 = income_statement.T[2:]
     isl.columns = list(income_statement.T.iloc[0])
