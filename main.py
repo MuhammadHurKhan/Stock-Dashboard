@@ -69,4 +69,4 @@ try:
 except Exception as e:
     st.write(f"Error: {e}")
     st.write("Invalid ticker symbol. Please enter a valid ticker symbol and try again.")
-``
+
