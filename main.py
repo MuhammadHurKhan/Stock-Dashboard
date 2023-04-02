@@ -54,7 +54,7 @@ try:
         st.write(cf)
 
     with news:
-        st.header(f"Latest NEWS for {ticker}")
+        st.header(f"What's going for {ticker} ?")
         sn = StockNews(ticker, save_news=False)
         df_news = sn.read_rss()
         for i in range(10):
@@ -68,5 +68,5 @@ try:
             st.write(f'News Sentiment {news_sentiment}')
 except Exception as e:
     st.write(f"Error: {e}")
-    st.write("Invalid ticker symbol. Please enter a valid ticker symbol and try again.")
+    st.write("Please Enter a ticker symbol.")
 
